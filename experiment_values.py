@@ -4,6 +4,14 @@ import numpy as np
 from scipy.spatial import distance
 from means import mean_l_h, mean_l_s, mean_l_v, mean_u_h, mean_u_s, mean_u_v
 
+'''
+COMMENTED INSTRUCTIONS
+In the imread() line, use the IMAGE_NAME variable
+Then, run the program and press 'm' to predict the path
+'''
+#To find the predicted path, run the program and press 'm'
+IMAGE_NAME = 'obj1.jpg'
+path_options = [(479.89423077, 325.51442308), (619.56692913, 251.41994751), (408.97231834, 343.41176471), (523.62751678, 226.62080537)]
 
 def nothing(x):
     pass
@@ -19,7 +27,7 @@ cv2.createTrackbar("UV", "Tracking", 255, 255, nothing)
 
 while True:
     # reading image
-    img = cv2.imread('obj2.jpg', -1)
+    img = cv2.imread(IMAGE_NAME, -1)
     hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
 
     # what to do with each vid frame
@@ -29,8 +37,6 @@ while True:
     h_h = cv2.getTrackbarPos("UH", "Tracking")
     h_s = cv2.getTrackbarPos("US", "Tracking")
     h_v = cv2.getTrackbarPos("UV", "Tracking")
-
-    path_options = [(479.89423077, 325.51442308), (619.56692913, 251.41994751), (408.97231834, 343.41176471), (523.62751678, 226.62080537)]
 
     lower = np.array([mean_l_h, mean_l_s, mean_l_v])
     upper = np.array([mean_u_h, mean_u_s, mean_u_v])
@@ -62,6 +68,7 @@ while True:
                 min_dist = distance.euclidean(path_options[i],avg)
                 index = i
         print(f'Path # {index+1}')
+
 
 cv2.destroyAllWindows()
 
