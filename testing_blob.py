@@ -2,7 +2,7 @@ import cv2
 import time
 import numpy as np
 from scipy.spatial import distance
-from means import mean_l_h, mean_l_s, mean_l_v, mean_u_h, mean_u_s, mean_u_v
+from means import mean_l_h, mean_l_s, mean_l_v, mean_u_h, mean_u_s, mean_u_v, blob_means
 
 '''
 COMMENTED INSTRUCTIONS
@@ -11,7 +11,8 @@ Then, run the program and press 'm' to predict the path
 '''
 #To find the predicted path, run the program and press 'm'
 IMAGE_NAME = 'obj3.jpg'
-path_options = [(479.89423077, 325.51442308), (619.56692913, 251.41994751), (408.97231834, 343.41176471), (523.62751678, 226.62080537)]
+# path_options = [(479.89423077, 325.51442308), (619.56692913, 251.41994751), (408.97231834, 343.41176471), (523.62751678, 226.62080537)]
+path_options = blob_means
 
 def nothing(x):
     pass
@@ -57,7 +58,8 @@ else:
 # displaying
 params = cv2.SimpleBlobDetector_Params()
 params.filterByColor = False
-params.filterByArea = False
+params.filterByArea = True
+params.minArea = 10
 params.filterByCircularity = False
 params.filterByInertia = False
 params.filterByConvexity = False
@@ -71,13 +73,22 @@ for kp in keypoints:
     sumX+=kp.pt[0]
     sumY+=kp.pt[1]
 
-print(count)
+print(f'Blobs: {count}')
 
 print(str(sumX/3) + " " + str(sumY/3))
+means = (sumX/3, sumY/3)
 im_with_keypoints = cv2.drawKeypoints(opening_img, keypoints, np.array([]), (0, 0, 255),
                                       cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
+min_dist = -1
+index = -1
+for i in range(0, 4):
+    if distance.euclidean(path_options[i], means) < min_dist or min_dist == -1:
+        min_dist = distance.euclidean(path_options[i], means)
+        index = i
+print(f'Path # {index + 1}')
+print(min_dist)
 cv2.imshow('processed image', im_with_keypoints)
-k = cv2.waitKey(0)
+k = cv2.waitKey(10000)
 if k == ord('p'):
     print(f'LH:{l_h} LS:{l_s} LV:{l_v} >>> UH:{h_h} US:{h_s} UV:{h_v}')
 elif k == ord('s'):
@@ -111,7 +122,7 @@ Uh:105
 Us:255
 Uv:255
 
-Obj3: mean=409.30617284 342.99012346  new mean=408.97231834 343.41176471 blob mean=563.9024556477865 433.1412862141927
+Obj3: mean=409.30617284 342.99012346  new mean=408.97231834 343.41176471 blob mean=449.79188028971356 306.5421396891276
 Lh:0
 Ls:232
 Lv:242
@@ -119,7 +130,7 @@ Uh:85
 Us:255
 Uv:255
 
-Obj4: mean=525.56470588 224.36470588  new mean=523.62751678 226.62080537
+Obj4: mean=525.56470588 224.36470588  new mean=523.62751678 226.62080537 blob mean=516.1250610351562 217.60052490234375
 Lh:0
 Ls:225
 Lv:240

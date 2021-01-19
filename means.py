@@ -11,6 +11,11 @@ mean_l_s = np.mean(LS)
 mean_l_v = np.mean(LV)
 mean_u_h = np.mean(UH)
 
+blob_means=[(465.78973388671875,305.0594075520833),
+            (571.5816853841146,245.081787109375),
+            (449.79188028971356,306.5421396891276),
+            (516.1250610351562,217.60052490234375)]
+
 print(f'LH:{mean_l_s} LS:{mean_l_s} LV:{mean_l_v} UH:{mean_u_h} LS:{mean_u_s} LV:{mean_u_v} ')
 '''
 Obj1: mean=480.52324037 327.4873838 
