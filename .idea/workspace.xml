@@ -1,12 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="a4240d9f-ff31-4ce3-9097-c6a10613dc3e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/opencv_practice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/opencv_practice.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video_processing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/means.py" beforeDir="false" afterPath="$PROJECT_DIR$/means.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testing_blob.py" beforeDir="false" afterPath="$PROJECT_DIR$/testing_blob.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,11 +187,23 @@
       <workItem from="1610943839996" duration="216000" />
       <workItem from="1610957903972" duration="19585000" />
       <workItem from="1611017582491" duration="1947000" />
+      <workItem from="1611099850412" duration="297000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1610944053733">
@@ -195,25 +222,25 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="747" y="240" width="487" height="633" key="Github.UntrackedFilesDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1611009181602" />
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1611021653678">
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1611064653622">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1611021653678" />
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1611064653622" />
     <state width="1802" height="150" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1611020371554" />
-    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1611021653674">
+    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1611064653621">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1611021653674" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1611064653621" />
     <state width="1802" height="150" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1611020371553" />
-    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1611021653669">
+    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1611064653621">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1611021653669" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1611064653621" />
     <state width="1802" height="150" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1611020371553" />
-    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1611021653675">
+    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1611064653622">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1611021653675" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1611064653622" />
     <state width="1802" height="150" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1611020371553" />
     <state x="659" y="259" key="search.everywhere.popup" timestamp="1611000634640">
       <screen x="72" y="27" width="1848" height="1053" />
@@ -223,7 +250,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/opencv_practice$main.coverage" NAME="main Coverage Results" MODIFIED="1610957909776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/opencv_practice$experiment_values.coverage" NAME="experiment_values Coverage Results" MODIFIED="1611019518745" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/opencv_practice$testing_blob.coverage" NAME="testing_blob Coverage Results" MODIFIED="1611021653645" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/opencv_practice$testing_blob.coverage" NAME="testing_blob Coverage Results" MODIFIED="1611021921391" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/opencv_practice$image_processing.coverage" NAME="image_processing Coverage Results" MODIFIED="1611006895881" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/opencv_practice$means.coverage" NAME="means Coverage Results" MODIFIED="1611007841761" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
