@@ -20,8 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4240d9f-ff31-4ce3-9097-c6a10613dc3e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/video_processing.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/opencv_practice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/opencv_practice.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_values.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiment_values.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/from_robot.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/from_robot.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testing_blob.py" beforeDir="false" afterPath="$PROJECT_DIR$/testing_blob.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +50,9 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -57,6 +63,28 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RunManager" selected="Python.testing_blob">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="opencv_practice" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="experiment_values" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="opencv_practice" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -187,7 +215,7 @@
       <workItem from="1610943839996" duration="216000" />
       <workItem from="1610957903972" duration="19585000" />
       <workItem from="1611017582491" duration="1947000" />
-      <workItem from="1611099850412" duration="297000" />
+      <workItem from="1611099850412" duration="3235000" />
     </task>
     <servers />
   </component>
@@ -222,25 +250,25 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="747" y="240" width="487" height="633" key="Github.UntrackedFilesDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1611009181602" />
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1611064653622">
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1611109045681">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1611064653622" />
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1611109045681" />
     <state width="1802" height="150" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1611020371554" />
-    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1611064653621">
+    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1611109045678">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1611064653621" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1611109045678" />
     <state width="1802" height="150" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1611020371553" />
-    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1611064653621">
+    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1611109045677">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1611064653621" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1611109045677" />
     <state width="1802" height="150" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1611020371553" />
-    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1611064653622">
+    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1611109045680">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1611064653622" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1611109045680" />
     <state width="1802" height="150" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1611020371553" />
     <state x="659" y="259" key="search.everywhere.popup" timestamp="1611000634640">
       <screen x="72" y="27" width="1848" height="1053" />
@@ -249,8 +277,8 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/opencv_practice$main.coverage" NAME="main Coverage Results" MODIFIED="1610957909776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/opencv_practice$experiment_values.coverage" NAME="experiment_values Coverage Results" MODIFIED="1611019518745" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/opencv_practice$testing_blob.coverage" NAME="testing_blob Coverage Results" MODIFIED="1611021921391" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/opencv_practice$experiment_values.coverage" NAME="experiment_values Coverage Results" MODIFIED="1611107568892" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/opencv_practice$testing_blob.coverage" NAME="testing_blob Coverage Results" MODIFIED="1611109045663" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/opencv_practice$image_processing.coverage" NAME="image_processing Coverage Results" MODIFIED="1611006895881" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/opencv_practice$means.coverage" NAME="means Coverage Results" MODIFIED="1611007841761" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
