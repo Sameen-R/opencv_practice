@@ -10,7 +10,7 @@ In the imread() line, use the IMAGE_NAME variable
 Then, run the program and press 'm' to predict the path
 '''
 #To find the predicted path, run the program and press 'm'
-IMAGE_NAME = 'obj4.jpg'
+IMAGE_NAME = 'obj3.jpg'
 # path_options = [(479.89423077, 325.51442308), (619.56692913, 251.41994751), (408.97231834, 343.41176471), (523.62751678, 226.62080537)]
 path_options = blob_means
 
@@ -52,6 +52,7 @@ while True:
 
     kernel = np.ones((3, 3), np.uint8)
     opening_img = cv2.morphologyEx(mask, cv2.MORPH_CLOSE, kernel)
+    opening_img = cv2.morphologyEx(opening_img, cv2.MORPH_OPEN, kernel)
 
     points = cv2.findNonZero(mask)
     if cv2.countNonZero(mask) > 0:
@@ -76,17 +77,20 @@ while True:
     Inertia ratio between 0.3-1 if detecting blue paths
     '''
     params.filterByInertia = True
-    params.minInertiaRatio = 0.3
+    params.minInertiaRatio = 0.2
     params.maxInertiaRatio = 1
 
     detector = cv2.SimpleBlobDetector_create(params)
     keypoints = detector.detect(opening_img)
 
-    far_points = []
-    for point in keypoints:
-        if point.pt[1]<=320 and point.pt[1]>=170:
-            if point.pt[0]<=580 and point.pt[0]>=140:
-                far_points.append(point)
+    # far_points = []
+    # for point in keypoints:
+    #     if point.pt[1]<=320 and point.pt[1]>=170:
+    #         if point.pt[0]<=780 and point.pt[0]>=190:
+    #             far_points.append(point)
+
+
+
     sumX = 0
     sumY = 0
     count = 0
@@ -95,9 +99,38 @@ while True:
         sumX += kp.pt[0]
         sumY += kp.pt[1]
 
-    print(f'Far Blobs: {count}')
-    for point in far_points:
-        print(f'({point.pt[0], point.pt[1]})', sep='   ')
+    '''
+        Area needs to be between 200-800 if detecting the red paths
+    '''
+    params.filterByArea = True
+    params.minArea = 300
+    params.maxArea = 800
+
+    '''
+    Inertia ratio between 0.3-1 if detecting red paths
+    '''
+    params.filterByInertia = True
+    params.minInertiaRatio = 0.3
+    params.maxInertiaRatio = 1
+
+    near_detector = cv2.SimpleBlobDetector_create(params)
+    near_keypoints = near_detector.detect(opening_img)
+
+    # near_points = []
+    # near_count = 0
+    # for point in near_keypoints:
+    #     if point.pt[1] <= 540 and point.pt[1] >= 320:
+    #         if point.pt[0] <= 780 and point.pt[0] >= 190:
+    #             near_points.append(point)
+    #             near_count+=1
+
+    # print(f'Far Blobs: {count}')
+    # for point in far_points:
+    #     print(f'({point.pt[0], point.pt[1]})', sep='   ')
+    # print()
+    # print(f'Near Blobs: {near_count}')
+    # for point in near_points:
+    #     print(f'({point.pt[0], point.pt[1]})', sep='   ')
 
     print(str(sumX / 3) + " " + str(sumY / 3))
     means = (sumX / 3, sumY / 3)
