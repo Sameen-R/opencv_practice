@@ -10,7 +10,7 @@ In the imread() line, use the IMAGE_NAME variable
 Then, run the program and press 'm' to predict the path
 '''
 #To find the predicted path, run the program and press 'm'
-IMAGE_NAME = 'from_robot.PNG'
+IMAGE_NAME = 'obj4.jpg'
 # path_options = [(479.89423077, 325.51442308), (619.56692913, 251.41994751), (408.97231834, 343.41176471), (523.62751678, 226.62080537)]
 path_options = blob_means
 
@@ -46,7 +46,7 @@ while True:
     # upper = np.array([mean_u_h, mean_u_s, mean_u_v])
 
     lower = np.array([0, 215, 235])
-    upper = np.array([255, 255, 255])
+    upper = np.array([245, 255, 255])
 
     mask = cv2.inRange(img, lower, upper)
 
@@ -64,7 +64,7 @@ while True:
     params = cv2.SimpleBlobDetector_Params()
     params.filterByColor = False
     params.filterByCircularity = True
-    params.minCircularity = 0.6
+    params.minCircularity = 0.5
     params.maxCircularity = 1
     params.filterByConvexity = False
 
@@ -79,7 +79,7 @@ while True:
     Inertia ratio between 0.3-1 if detecting blue paths
     '''
     params.filterByInertia = True
-    params.minInertiaRatio = 0.5
+    params.minInertiaRatio = 0.3
     params.maxInertiaRatio = 1
 
     detector = cv2.SimpleBlobDetector_create(params)
