@@ -10,7 +10,7 @@ In the imread() line, use the IMAGE_NAME variable
 Then, run the program and press 'm' to predict the path
 '''
 #To find the predicted path, run the program and press 'm'
-IMAGE_NAME = 'obj3.jpg'
+IMAGE_NAME = 'from_robot.PNG'
 # path_options = [(479.89423077, 325.51442308), (619.56692913, 251.41994751), (408.97231834, 343.41176471), (523.62751678, 226.62080537)]
 path_options = blob_means
 
@@ -63,25 +63,76 @@ while True:
     # displaying
     params = cv2.SimpleBlobDetector_Params()
     params.filterByColor = False
-    params.filterByCircularity = False
+    params.filterByCircularity = True
+    params.minCircularity = 0.6
+    params.maxCircularity = 1
     params.filterByConvexity = False
 
     '''
     Area needs to be between 100-500 if detecting the blue paths
     '''
-    params.filterByArea = True
-    params.minArea = 100
-    params.maxArea = 500
+    params.filterByArea = False
+    # params.minArea = 100
+    # params.maxArea = 1000
 
     '''
     Inertia ratio between 0.3-1 if detecting blue paths
     '''
     params.filterByInertia = True
-    params.minInertiaRatio = 0.2
+    params.minInertiaRatio = 0.5
     params.maxInertiaRatio = 1
 
     detector = cv2.SimpleBlobDetector_create(params)
     keypoints = detector.detect(opening_img)
+
+    big1 = None
+    big2 = None
+    big3 = None
+    print(keypoints)
+
+    if keypoints[0].size > keypoints[1].size:
+        if keypoints[1].size > keypoints[2].size:
+            big1 = keypoints[0]
+            big2 = keypoints[1]
+            big3 = keypoints[2]
+        else:
+            big1 = keypoints[0]
+            big2 = keypoints[2]
+            big3 = keypoints[1]
+
+    else:
+        if keypoints[0].size > keypoints[2].size:
+            big1 = keypoints[1]
+            big2 = keypoints[0]
+            big3 = keypoints[2]
+        else:
+            big1 = keypoints[1]
+            big2 = keypoints[2]
+            big3 = keypoints[0]
+
+
+
+    for kp in keypoints:
+        if kp == big1:
+            continue
+        if kp == big2:
+            continue
+        if kp == big3:
+            continue
+        if kp.size > big1.size:
+            big3 = big2
+            big2 = big1
+            big1 = kp
+        elif kp.size > big2.size:
+            big3 = big2
+            big2 = kp
+        elif kp.size > big3.size:
+            big3 = kp
+
+    keypoints = [big1, big2, big3]
+    print(big1.pt)
+    print(big2.pt)
+    print(big3.pt)
 
     # far_points = []
     # for point in keypoints:
@@ -90,47 +141,10 @@ while True:
     #             far_points.append(point)
 
 
-
     sumX = 0
     sumY = 0
     count = 0
-    for kp in far_points:
-        count += 1
-        sumX += kp.pt[0]
-        sumY += kp.pt[1]
 
-    '''
-        Area needs to be between 200-800 if detecting the red paths
-    '''
-    params.filterByArea = True
-    params.minArea = 300
-    params.maxArea = 800
-
-    '''
-    Inertia ratio between 0.3-1 if detecting red paths
-    '''
-    params.filterByInertia = True
-    params.minInertiaRatio = 0.3
-    params.maxInertiaRatio = 1
-
-    near_detector = cv2.SimpleBlobDetector_create(params)
-    near_keypoints = near_detector.detect(opening_img)
-
-    # near_points = []
-    # near_count = 0
-    # for point in near_keypoints:
-    #     if point.pt[1] <= 540 and point.pt[1] >= 320:
-    #         if point.pt[0] <= 780 and point.pt[0] >= 190:
-    #             near_points.append(point)
-    #             near_count+=1
-
-    # print(f'Far Blobs: {count}')
-    # for point in far_points:
-    #     print(f'({point.pt[0], point.pt[1]})', sep='   ')
-    # print()
-    # print(f'Near Blobs: {near_count}')
-    # for point in near_points:
-    #     print(f'({point.pt[0], point.pt[1]})', sep='   ')
 
     print(str(sumX / 3) + " " + str(sumY / 3))
     means = (sumX / 3, sumY / 3)
@@ -145,7 +159,7 @@ while True:
     print(f'Path # {index + 1}')
     print(min_dist)
     cv2.imshow('processed image', im_with_keypoints)
-    k = cv2.waitKey(1)
+    k = cv2.waitKey(0)
     if k == ord('p'):
         print(f'LH:{l_h} LS:{l_s} LV:{l_v} >>> UH:{h_h} US:{h_s} UV:{h_v}')
     elif k == ord('s'):
@@ -158,6 +172,8 @@ while True:
                 min_dist = distance.euclidean(path_options[i], avg)
                 index = i
         print(f'Path # {index + 1}')
+
+    break
 
 
 cv2.destroyAllWindows()
